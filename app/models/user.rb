@@ -4,7 +4,7 @@ class User < ApplicationRecord
     threads = []
 
     amount.times do
-      threads << Thread.new do
+      threads << Thread.new do # Note: solution must include threading! #
         self.balance+=1
         self.save!
       end
